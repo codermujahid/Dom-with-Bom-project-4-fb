@@ -1,0 +1,176 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+*{
+    text-decoration: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+/*fb header*/
+.fb-top-header.px-3.shadow-sm {
+    padding-top: 8px;
+    padding-bottom: 3px;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: white;
+}
+
+li{ 
+    list-style: none;
+    display: inline;
+}
+ul{
+    margin-bottom: 0px;
+}
+
+/* fb-brands 
+=============
+*/
+.fb-brands{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.fb-brands .search {
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+.fb-brands a img {
+    width: 34px;
+    height: 34px;
+}
+/* .fb-brands {
+    background-image: url(./asets/img/facebook.png);
+    height: 31px;
+    width: 35px;
+    background-size: cover;
+} */
+
+.fb-brands .search input {
+    border-radius: 50px;
+    border: none;
+    background: #f7f7f7;
+    padding: 5px 40px;
+}
+.fb-brands .search button {
+    border: none;
+    position: absolute;
+    left: 15px;
+    top: 5px;
+}
+
+
+/* fb-menu
+=============
+*/
+.fb-menu ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 37px;
+    margin-bottom: 0px;
+
+}
+.fb-menu ul li{
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    position: relative;
+
+}
+.fb-menu ul li a{
+    display: block;
+    color: #4d5158;
+}
+.fb-menu ul li.active a { 
+    color: #0d6efd;
+}
+.fb-menu ul li.active::before{
+
+    content: '';
+    width: 100%;
+    height: 3px;
+    display: block;
+    background-color: #0d6efd;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    bottom: 0px;
+
+
+}
+
+
+/* fb-auth 
+=============
+*/
+
+.fb-auth ul li img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+
+.fb-auth ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+.fb-auth ul li{
+    margin-right: 10px;
+}
+.fb-auth ul li a{
+    
+}
+.fb-auth ul li a {
+    color: #050505;
+    background-color: #e4e6eb;
+    display: block;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    line-height: 34px;
+    text-align: center;
+}
+
+/* fb-body
+=============
+*/
+.fb-body{
+    background-color: #e4e6eb;
+    padding-top: 70px;
+    min-height: 100vh;
+
+}
+.list .list-icon img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    vertical-align: bottom;
+}
+.list-title {
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #050505;
+    line-height: 35px;
+}
+
