@@ -202,19 +202,19 @@ ul{
 
 }
 .fb-story-area .sotory-box:nth-child(1){
-    background-image: url(./asets/img/fb-allv009.jpg);
+    background-image: url(./asets/img/mimi.jpg);
 }
 .fb-story-area .sotory-box:nth-child(2){
-    background-image: url(./asets/img/fb-allv028.jpg);
+    background-image: url(./asets/img/rpjannat.jpg);
 }
 .fb-story-area .sotory-box:nth-child(3){
-    background-image: url(./asets/img/fb-allv022.jpg);
+    background-image: url(./asets/img/raj.jpg);
 }
 .fb-story-area .sotory-box:nth-child(4){
-    background-image: url(./asets/img/fb-allv041.jpg);
+    background-image: url(./asets/img/mumta.jpg);
 }
 .fb-story-area .sotory-box:nth-child(5){
-    background-image: url(./asets/img/fb-allv042.jpg);
+    background-image: url(./asets/img/codermujahid.jpg);
 }
 .fb-story-area .sotory-box .user-avatar img{
     width: 25px;
@@ -289,8 +289,9 @@ position: relative;
     text-align: left;
 }
 .post-modal-area .modal-button button:hover{
-    background-color: #dadada;
+    background-color: #e4e6e9;
 }
+
 
 /* icon-area */
 
@@ -303,8 +304,8 @@ position: relative;
     justify-content: space-between;
 }
 .icon-area .icon-box{
-    padding: 10px 13px;
-    border-radius: 8px;
+    padding: 7px 13px;
+    border-radius: 5px;
     flex: 1;
     text-align: center; 
     cursor: pointer;
@@ -342,10 +343,16 @@ position: relative;
 }
 .post-timeline-area .post-auth-area .user-info .dtails span{
     display: block;
+    margin-left: 10px; 
+
+}
+.post-timeline-area .post-auth-area .user-info .dtails span:nth-child(1){
+    display: block;
     margin-left: 10px;
     font-weight: bold;
 
 }
+
 .post-timeline-area .post-auth-area .user-info{
     display: flex;
 }
@@ -354,4 +361,166 @@ position: relative;
     height: 40px;
     border-radius: 50%;
 
+}
+.post-timeline-area .post-auth-area .dropdown{
+    border: none;
+    background-color: transparent; 
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    
+
+}
+.post-timeline-area .post-auth-area .dropdown a i{
+   
+    color: #4d5158 !important;
+
+}
+
+.post-timeline-area .post-auth-area .dropdown:hover{
+    border: none;
+    background-color: transparent;
+    background: #f2f2f2;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%; 
+}
+.icon-area .icon-box img {
+    width: 20px !important;
+}
+.icon-area{
+    /* border: 1px solid red; */
+}
+
+.icon-area.brdr {
+    border-top: 2px solid #f0f2f5;
+    border-bottom: 2px solid #f0f2f5;
+    margin: 37px 20px !important;
+}
+
+
+.dropdown-toggle::after { 
+    display: none;
+}
+/* comment section */
+.post-comment{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 20px !important;
+
+}
+
+.post-comment .comment {
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.post-comment a img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+/* .fb-brands {
+    background-image: url(./asets/img/facebook.png);
+    height: 31px;
+    width: 35px;
+    background-size: cover;
+} */
+
+.post-comment .comment input {
+    border-radius: 50px;
+    border: none;
+    background: #f7f7f7;
+    padding: 5px 40px;
+    width: 522px !important;
+}
+.post-comment .comment .imoji {
+    border: none;
+    position: absolute;
+    right: 25px;
+    top: 8px;
+}
+.post-comment .comment .imoji:hover { 
+    right: 25px;
+    top: 5px;
+}
+
+.post-comment .comment .photo-vedio {
+    border: none;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+.post-comment .comment .gift {
+    border: none;
+    position: absolute;
+    right: -23px;
+    top: 7px;
+}
+.post-comment .comment .sticar {
+    border: none;
+    position: absolute;
+    right: -30px;
+    top: 10px;
+}
+ 
+
+.post-comment .comment .imoji {
+    background-image: url("./asets/img/XXsK9YQbyiF.png");
+    background-position: 0px -534px;
+    background-size: 26px 870px;
+    width: 116px;
+    height: 16px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-color: transparent;
+}
+.post-comment .comment .photo-vedio {
+    background-image: url("./asets/img/XXsK9YQbyiF.png");
+    background-position: 0px -461px;
+    background-size: 26px 875px;
+    width: 100px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    display: inline-block;
+}
+
+.post-comment .comment .gift {
+    background-image: url("./asets/img/XXsK9YQbyiF.png");
+    background-position: 0px -529px;
+    background-size: 26px 811px;
+    width: 110px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    display: inline-block;
+}
+
+.post-comment .comment .sticar {
+    background-image: url("./asets/img/XXsK9YQbyiF.png");
+    background-position: 0px -464px;
+    background-size: 35px 582px;
+    width: 87px;
+    height: 13px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    display: inline-block;
+}
+ 
+.post-comment .comment .imoji:hover, .post-comment .comment .sticar:hover {
+    background-color: #adb5bd;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    background-position: 3px -534px;
+    background-size: 28px 877px;
+    background-repeat: no-repeat;
+    right: 118px;
+    top: 5px;
+    border-radius: 50%;
 }
