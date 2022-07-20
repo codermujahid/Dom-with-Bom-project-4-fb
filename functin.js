@@ -65,7 +65,6 @@ localStorage.setItem(key, JSON.stringify(data));
 }
 
 
-
 /**
  * Update our ls data 
  */

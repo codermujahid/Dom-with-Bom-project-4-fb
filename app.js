@@ -1,17 +1,19 @@
-//get aliment 
+// get elemens
 const post_form = document.getElementById('post_add_form');
 const masg = document.querySelector('.masg');
-const All_post = document.querySelector('.All_post ');
+const all_post = document.querySelector('.all_post');
 
 
 
-// get all post
-const getAllPost = () => {
-    let post = readLSData('fb_post');
+//get all post
+const getAllPost = () =>{
+
+    let posts = readLSData('fb_post');
+
     let list = '';
+    posts.reverse().map(data => {
 
-    post.reverse().map( data => {
-        list += `
+        list +=`
         <div class="post-timeline-area">
         <div class="card shadow-sm my-4">
             <div class="card-body">
@@ -31,9 +33,9 @@ const getAllPost = () => {
                         </a>
                       
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <li><a class="dropdown-item" href="#">Delete</a></li>
-                          <li><a class="dropdown-item" href="#">Edit</a></li>
-                          <li><a class="dropdown-item" href="#">Save</a></li>
+                          <li><a class="dropdown-item delet_post" post_id=${ data.id } href="#">Delete</a></li>
+                          <li><a class="dropdown-item edit_post"  href="#">Edit</a></li>
+                          <li><a class="dropdown-item"  href="#">Save</a></li>
                         </ul>
                       </div>
                 </div> 
@@ -77,33 +79,79 @@ const getAllPost = () => {
        
         
     </div>
+        
+        
         `;
 
-    } )
+
+    })
 
 
-    All_post.innerHTML = list;
+    all_post.innerHTML= list;
+
 
 }
+
 getAllPost();
 
-// post form submit
- 
+
+
+// get form submit
 post_form.onsubmit = (e) => {
+
     e.preventDefault();
 
-    const form_data = new FormData(e.target);
-    const data = Object.fromEntries(form_data.entries ());
-    const {aname, aphoto, pcontent, pphoto} = Object.fromEntries(form_data.entries ());
 
-    //validation
+    // form data get
+    const form_data = new FormData(e.target);
+    const data = Object.fromEntries(form_data.entries());
+    const { aname, aphoto, pphoto, pcontent} = Object.fromEntries(form_data.entries());
+
+    //creat a random
+    const randId = Math.floor(Math.random() * 1000000) +'_'+ Date.now();
+
+    // validation
     if (!aname || !aphoto || !pcontent || !pphoto) {
-        masg.innerHTML = setAlert('All fields are required');
+        masg.innerHTML = setAlert('All fields are requird');
 
     }else{
-        createLSData('fb_post', data)
-        e.target.reset(); 
+        createLSData('fb_post', { ...data, id : randId});
+        e.target.reset();
         getAllPost();
+
     }
 
+
+
 }
+
+// data delet
+all_post.onclick = (e) => {
+    
+
+    e.preventDefault();
+
+    // post delet
+    if (e.target.classList.contains('delet_post')) {
+        
+        //get post id
+        const postId = e.target.getAttribute('post_id');
+        
+
+        //get all post
+        const posts = readLSData('fb_post');
+
+
+        // delet data arey
+        const deleted_data = posts.filter(data => data.id !== postId);
+
+        //now update new data 
+        updateLSData('fb_post', deleted_data);
+
+        getAllPost();
+
+         
+        
+    }
+} 
+ 
