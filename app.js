@@ -131,10 +131,19 @@ all_post.onclick = (e) => {
 
     e.preventDefault();
 
+   
+
+
+
     // post delet
     if (e.target.classList.contains('delet_post')) {
         
-        //get post id
+
+
+         //get post delet confir
+        let conf = confirm('Are you sure ?')
+        if (conf) {
+            //get post id
         const postId = e.target.getAttribute('post_id');
         
 
@@ -148,7 +157,12 @@ all_post.onclick = (e) => {
         //now update new data 
         updateLSData('fb_post', deleted_data);
 
+
+
         getAllPost();
+        }
+
+        
 
          
         
